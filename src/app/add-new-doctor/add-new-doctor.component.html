@@ -1,0 +1,104 @@
+<div class="login">
+     <div class="login-triangle"></div>
+
+     <h2 class="login-header">Add doctor</h2>
+
+   
+  <form class="login-container" #form="ngForm"(ngSubmit)="onSubmit(form)">
+     <p><input type="name" placeholder="Name"
+        name="name" [(ngModel)]="RegisterDoctor.name" required
+        placeholder="Enetr Your Name" [class.is-invalid]="name.invalid && name.touched" #name="ngModel" >
+     <p>
+        <small class="text-danger" [class.d-none]="name.valid || name.untouched">Enter Your Name</small>
+          <p><input type="nationalID" placeholder="national ID" placeholder="nationalID"
+             name="nationalID" [(ngModel)]="RegisterDoctor.nationalID" required
+             placeholder="Enetr Your nationalID" [class.is-invalid]="nationalID.invalid && nationalID.touched" #nationalID="ngModel">
+               <p>
+                  <small class="text-danger" [class.d-none]="nationalID.valid || nationalID.untouched">Enter Your nationalID</small>
+     <p><input type="email" placeholder="email" placeholder="email"
+        name="email" [(ngModel)]="RegisterDoctor.email" required
+        placeholder="Enetr Your email" [class.is-invalid]="email.invalid && email.touched" #email="ngModel">
+     <p>
+        <small class="text-danger" [class.d-none]="email.valid || email.untouched">Enter Your email</small>
+     <p><input type="phone" placeholder="phone"
+        name="phone" [(ngModel)]="RegisterDoctor.phone" required
+        placeholder="Enetr Your phone" [class.is-invalid]="phone.invalid && phone.touched" #phone="ngModel">
+        <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Enter Your phone</small>
+     <p>
+     <!-- <p><input type="specialization" placeholder="specialization"
+        name="specialization" [(ngModel)]="RegisterDoctor.specialization" required
+        placeholder="Enetr Your specialization" [class.is-invalid]="specialization.invalid && specialization.touched" #specialization="ngModel">
+     <p> -->
+      <select name="specialization" id="pet-select" [(ngModel)]="RegisterDoctor.specialization" required [class.is-invalid]="specialization.invalid && specialization.touched" #specialization="ngModel">
+         <option value="">Enter your specialization</option>
+         <option value="حقن مجهري واطفال انابيب">حقن مجهري واطفال انابيب</option>
+         <option value="ذكوره وعقم">ذكوره وعقم</option>
+         <option value="روماتيزم">روماتيزم</option>
+         <option value="سكر وغدد صماء">سكر وغدد صماء</option>
+         <option value="سمعيات">سمعيات</option>
+         <option value="صدر وجهاز تنفسي">صدر وجهاز تنفسي</option>
+         <option value="طب الاسره">طب الاسره</option>
+         <option value="طب المسنين">طب المسنين</option>
+         <option value="طب تقويمي">طب تقويمي</option>
+         <option value="عظام">عظام</option>
+         <option value="goldfish">Goldfish</option>
+         <option value="علاج الالام">علاج الالام</option>
+         <option value="علاج طبيعي واصابات ملاعب">علاج طبيعي واصابات ملاعب</option>
+         <option value="عيون">عيون</option>
+         <option value="قلب واوعيه دمويه">قلب واوعيه دمويه</option>
+         <option value="مخ واعصاب">مخ واعصاب</option>
+         <option value="مسالك بوليه">مسالك بوليه</option>
+         <option value="ممارس عام">ممارس عام</option>
+         <option value="نساء وتوليد">نساء وتوليد</option>
+         <option value="نطق وتخاطب">نطق وتخاطب</option>
+         <option value="نفسي">نفسي</option>
+       
+         <option value="جراحه اورام">جراحه اورام</option>
+         <option value="جراحه اوعيه دمويه">جراحه اوعيه دمويه</option>
+         <option value="جراحه عامه">جراحه عامه</option>
+         <option value="جراحه قلب وصدر">جراحه قلب وصدر</option>
+         <option value="جراحه وجه وفكين">جراحه وجه وفكين</option>
+         <option value="جلديه">جلديه</option>
+      
+         <option value="جهاز هضمي ومناظير">جهاز هضمي ومناظير</option>
+         <option value="حساسيه ومناعه">حساسيه ومناعه</option>
+         <option value="اطفال وحديثي الولاده">اطفال وحديثي الولاده</option>
+         <option value="انف واذن وحنجره">انف واذن وحنجره</option>
+         <option value="اورام">اورام</option>
+         <option value="اسنان">اسنان</option>
+         <option value="امراض الدم">امراض الدم</option>
+         <option value="امراض الكبد">امراض الكبد</option>
+         <option value="امراض كلي">امراض كلي</option>
+         <option value="باطنه">باطنه</option>
+         <option value="تخسيس وتغذيه">تخسيس وتغذيه</option>
+         <option value="جراحه تجميل">جراحه تجميل</option>
+         <option value="جراحه سمنه ومناظير">جراحه سمنه ومناظير</option>
+         <option value="جراحه مخ واعصاب">جراحه مخ واعصاب</option>
+         <option value="جراحه اطفال">جراحه اطفال</option>
+         <option value="جراحه اورام">جراحه اورام</option>
+         <option value="جراحه اوعيه دمويه">جراحه اوعيه دمويه</option>
+         <option value="جراحه عامه">جراحه عامه</option>
+         <option value="جراحه قلب وصدر">جراحه قلب وصدر</option>
+         <option value="جراحه وجه وفكين">جراحه وجه وفكين</option>
+      
+     </select>
+     
+        <small class="text-danger" [class.d-none]="specialization.valid || specialization.untouched">Enter Your phone</small>
+     <p><input type="city" placeholder="city"
+        name="city" [(ngModel)]="RegisterDoctor.city" required
+        placeholder="Enetr Your city" [class.is-invalid]="city.invalid && city.touched" #city="ngModel"></p>
+        <small class="text-danger" [class.d-none]="city.valid || city.untouched">Enter Your city</small>
+     <p><input type="address" placeholder="address"
+        name="address" [(ngModel)]="RegisterDoctor.address" required
+        placeholder="Enetr Your address" [class.is-invalid]="address.invalid && address.touched" #address="ngModel"></p>
+        <small class="text-danger" [class.d-none]="address.valid || address.untouched">Enter Your address</small>
+     <p><input type="password" placeholder="Password"name="password" [(ngModel)]="RegisterDoctor.password" required
+        placeholder="Enter Password" [class.is-invalid]="password.invalid && password.touched" #password="ngModel"></p><small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is Required</small>
+     <p><input type="password" placeholder="repeate password"
+        name="password2" id="password2" [(ngModel)]="RegisterDoctor.password2"
+        required placeholder="Repeat Password Again" [class.is-invalid]="password2.invalid && password2.touched"
+        #password2="ngModel" ></p>
+        <small class="text-danger" [class.d-none]="password2.valid || password2.untouched">Password is Required</small>
+     <p><input type="submit" [disabled]="form.form.invalid" value="Add doctor" ></p>
+</form>
+</div>

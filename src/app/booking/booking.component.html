@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+</head>
+<body>
+   
+     <div class="container-fluid">
+          <form  #form="ngForm" method="POST">
+          <div class="row">
+<div class="col-sm-6">
+     <input class="btn btn-info age" type="text" name="time" id="time"  [(ngModel)]="bookingModel.time" #time="ngModel" name="time" value="  {{mydate |date:'short' }}"> 
+     <input class="btn btn-info age" type="text" name="date" id="date" placeholder="date" [(ngModel)]="bookingModel.date" #time="ngModel" name="date">
+     <input class="btn btn-info btn1" type="text" name="doctorName" id="doctorName" placeholder="doctorName" [(ngModel)]="bookingModel.doctorName" #doctorName="ngModel" name="doctorName">
+
+     <input class="btn btn-info age" type="text" name="notesBooking" id="notesBooking" placeholder="notesBooking" [(ngModel)]="bookingModel.notesBooking" #notesBooking="ngModel" name="notesBooking">
+     
+     <button type="button" class="btn btn-info btn2"  (click)="onSubmit()">booking حجز</button>
+     <button type="button" class="btn btn-info btn2"  >discard الغاء</button>
+ </div>
+     <div class="col-sm-6">
+          <h6 class="h1">time احجز موعد</h6>
+          <h6 class="h2">date بتاريخ</h6>
+          <h6  class="h3">doctor name اسم الطبيب</h6>
+          <h6 class="h4">notes ملاحظات</h6>
+           </div>   
+          </div>
+          <div class="row">
+               <input class="btn btn-info btn2 display" type="text"     value ="{{patientModel.patientnum}}" 
+               name="patientnum" id="patientnum"  [(ngModel)]="bookingModel.patientnum" #patientnum="ngModel" name="patientnum"
+               > 
+
+               <input class="btn btn-info btn2 display" type="text"   value ="{{patientModel.name}}"
+               name="name" id="notesBooking" [(ngModel)]="bookingModel.name" #name="ngModel" name="name"
+               > 
+               <input class="btn btn-info btn2 display" type="text"   value ="{{patientModel.cost}}"
+               name="name" id="cost" [(ngModel)]="bookingModel.cost" #name="ngModel" name="name"
+               > 
+
+               <input class="btn btn-info btn2 display" type="text"  value ="{{patientModel.age}}"
+               name="age" id="age"  [(ngModel)]="bookingModel.age" #age="ngModel" name="age"> 
+
+               <input class="btn btn-info btn2 display" type="text" value ="{{patientModel.address}}"
+               name="address" id="address"  [(ngModel)]="bookingModel.address" #address="ngModel" name="address"
+               > 
+               <input class="btn btn-info btn2 display" type="text"  value ="{{patientModel.nationality}}"
+               name="nationality" id="nationality" [(ngModel)]="bookingModel.nationality" #nationality="ngModel" name="nationality"
+               > 
+               <input class="btn btn-info btn2 display" type="text" value ="{{patientModel.phone}}"
+               name="phone" id="notesBooking"  [(ngModel)]="bookingModel.phone" #phone="ngModel" name="phone"
+               > 
+               <input class="btn btn-info btn2 display" type="text" value ="{{patientModel.notes}}"
+               name="notes" id="notes"  [(ngModel)]="bookingModel.notes" #notes="ngModel" name="notes"
+               > 
+          </div>
+     </form>
+     </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div class="login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Log in</h2>
+
+  <form class="login-container" #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <p><input type="email" placeholder="Email" class="form-control" name="email" id="email" [(ngModel)]="Login.email" required placeholder="email"
+      [class.is-invalid]="email.invalid && email.touched" #email="ngModel"></p>
+      <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is Required</small>
+    <p><input type="password" class="form-control" name="password" id="password" [(ngModel)]="Login.password" required
+      placeholder="password" [class.is-invalid]="password.invalid && password.touched" #password="ngModel"></p>
+      <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is Required</small>
+    <p><input type="submit" type="submit" [disabled]="form.form.invalid">
+    </p>
+    <a routerLink="/login-doctor">is doctor?</a>
+  </form>
+  <div *ngIf="Result" class="btn btn-danger">{{Div}} </div>
+  <div *ngIf="Result2" class="btn btn-success">{{Div2}} </div>
+</div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+    <div class="container-fluid">
+         <div class="row content">
+              <div class="container-fluid">
+                   <div class="row">
+                        <h5>Super clinic</h5>
+                        
+                   </div>
+                   <div class="row">
+                   
+                     <h6>تقرير طبي</h6>
+               </div>
+               <div class="row">
+                    <table class="my_table">
+                         <tr class="header">
+                           
+                           <th>الجنسيه</th>
+                           <th>العنوان</th>
+                           <th>العمر</th>
+                           <th>رقم الموبايل</th>
+                           <th>رقم المريض</th>
+                           <th>الاسم</th>
+                         </tr>
+                         <tr *ngFor="let patient of patientdata">
+                         
+                           <td>{{patient.nationality}}</td>
+                           <td>{{patient.address}}</td>
+                           <td>{{patient.age}}</td>
+                           <td>{{patient.phone}}</td>
+                           <td>{{patient.patientnum}}</td>
+                           <td>{{patient.name}}</td>
+                         </tr>
+                        
+                        
+                          
+                         
+                         
+                       </table>
+                 <hr>
+              </div>
+              <hr>
+              <div class="row">
+                   <div class="col-sm-4">
+                        <h6>Address:Qena</h6>
+                        <h6>Phone:010011111111</h6>
+                   </div>
+                   <div class="col-sm-4"></div>
+                   <div class="col-sm-4">
+                    <h6 class="address">العنوان:قنا </h6>
+                    <h6>الهاتف:01001111111</h6>
+                   </div>
+              </div>
+              </div>
+         </div>
+    </div>
+</body>
+</html>

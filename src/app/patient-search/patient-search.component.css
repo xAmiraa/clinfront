@@ -1,0 +1,112 @@
+
+.contstyle{
+     margin-top: 60px;
+     margin-bottom: 60px;
+   }
+   .img-center {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+   }
+   .img-showcase {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 25px;
+   
+   }
+   .img-container {
+       display: block;
+       position: relative;
+   }
+   .link-overlay {
+     color: #fff;
+     text-decoration: none;
+   }
+   .link-overlay:hover {
+     color: #000;
+     background-color: #fff;
+     transition: all 0.75s ease-in-out;
+     text-decoration: none;
+   }
+   .workItem {
+     display: none;
+   }
+   .show-workItem {
+     display: block;
+     transition: all .35s ease;
+   }
+   .overlay {
+     width: 100%;
+     height: 100%;
+     background: rgba(0,0,0,0.5);
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     opacity: 0;
+     color: #fff;
+     transition: all 0.5s ease-in-out;
+     text-align: center;
+     padding-top: 130px;
+   }
+   .overlay:hover {
+     opacity: 1;
+   }
+   .action-button
+ {
+      position: relative;
+      padding: 10px 40px;
+   margin: 0px 10px 10px 0px;
+   float: left;
+      border-radius: 10px;
+      font-family: 'Pacifico', cursive;
+      font-size: 25px;
+      color: #FFF;
+      text-decoration: none;	
+ }
+   
+ .black
+ {
+      background-color: rgb(23, 24, 23);
+      border-bottom: 5px solid #0d0e0d;
+      text-shadow: 0px -2px #252525;
+ }
+ 
+ .action-button:active
+ {
+      transform: translate(0px,5px);
+   -webkit-transform: translate(0px,5px);
+      border-bottom: 1px solid;
+ }
+ .btn {
+   box-sizing: border-box;
+   appearance: none;
+   background-color: transparent;
+   border: 2px solid #e74c3c;
+   border-radius: 0.6em;
+   color: #e74c3c;
+   cursor: pointer;
+   display: flex;
+   align-self: center;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1;
+   margin: 20px;
+   padding: 1.2em 2.8em;
+   text-decoration: none;
+   text-align: center;
+   text-transform: uppercase;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 700;
+ }
+ .btn:hover, .btn:focus {
+   color: #fff;
+   outline: 0;
+ }
+ .first {
+   transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+ }
+ .first:hover {
+   box-shadow: 0 0 40px 40px #e74c3c inset;
+ }

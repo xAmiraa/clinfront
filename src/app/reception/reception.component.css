@@ -1,0 +1,15 @@
+.bg-light {
+     background-color: rgb(77, 28, 122)!important;
+ 
+ }
+ li{
+      border: 3px solid rgb(132, 91, 170);
+     color: ivory;
+     font-family: mv boli;
+     font-size:large;
+     border-radius: 7%;
+     margin-right: 17px;
+ }
+ .navbar-light .navbar-nav .nav-link {
+     color: #f8faf9;
+ }

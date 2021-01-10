@@ -1,0 +1,61 @@
+body{
+  
+     z-index: 2;
+     background-image: url("https://wallpaperplay.com/walls/full/a/e/6/33398.jpg");
+     background-size: cover;
+     background-attachment: fixed;
+     height: 100%;
+     width: 100%;
+}
+.content{
+     height: 800px;
+     width: 100%;  
+}
+h5 {
+     text-align: center;
+     margin: auto;
+     display: block
+     ;
+}
+h6{
+     text-align: center;
+     margin: auto;
+}
+
+
+table {
+     border-collapse: collapse;
+  margin-top: 50px;
+  margin-right:0px ;
+  margin-bottom: 250px;
+   }
+    
+   
+    td {
+     border: 1px solid #ccc;
+     padding: 8px;
+     width:200px;
+     font-size: small;
+     background: #ada9a9;
+   }
+   th{
+     border: 1px solid #ccc;
+     padding: 8px;
+     width:200px;
+     font-size: 16px;
+     background: #e0cfdb;
+   }
+   
+   tr:nth-child(even) {
+  
+   }
+
+   tr:hover {
+     background: #5f2c5b;
+   }
+   hr{
+        font-size: 10px;
+     font-weight: 100;
+     margin-top: 0px !important;
+   }
+   

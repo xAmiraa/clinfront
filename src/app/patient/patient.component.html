@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+     <!-- <div class="container-fluid">
+          <div class="row">
+               <div class="patient_" >
+<strong class="item" >الاسم</strong>
+<strong  class="item">رقم المريض</strong>
+<strong  class="item">رقم الهاتف</strong>
+<strong  class="item">العمر</strong>
+<strong  class="item">تعديل</strong>
+<strong  class="item">حجز</strong>
+<strong  class="item">حذف</strong>
+<strong  class="item">طباعه</strong>
+               </div>
+          </div>
+          <div class="row">
+               <div class="patientContent" *ngFor="let patient of patientdata">
+                    <strong class="item" >{{patient.name}}</strong>
+<strong  class="item">{{patient.patientnum}}</strong>
+<strong  class="item">{{patient.phone}}</strong>
+<strong  class="item">{{patient.age}}</strong>
+<strong  class="item">تعديل</strong>
+<strong  class="item">حجز</strong>
+<strong  class="item">حذف</strong>
+<strong  class="item">طباعه</strong>
+               </div>
+          </div>
+         
+        
+        
+          
+          
+     </div> -->
+     <div class="row">
+          <div class="col-md-6">
+               
+              
+          
+               <form class="form-group" style="margin-top: 50px;margin-left: 80px;">
+                 <input class="btn btn-info inp3" type="search"  
+                   aria-label="Search" #searchInput name="searchText"
+                   [(ngModel)]='searchText'>
+                 <button class="btn btn-info"style="margin-left: 290px;margin-top: -70px;" type="submit"
+                   (click)="search(searchInput.value)">Search</button>
+               </form>
+          </div>
+          <div class="col-md-4">
+              
+          </div>
+       
+     </div>
+
+     <table class="my_table">
+          <tr class="header">
+            <th>طباعه</th>
+            <th>حذف</th>
+            <th>حجز</th>
+            <th>تعديل</th>
+            <th>العمر</th>
+            <th>رقم الموبايل</th>
+            <th>رقم المريض</th>
+            <th>الاسم</th>
+          </tr>
+          <tr *ngFor="let patient of patientdata | filter:searchText index as i">
+            <td><i class="fas fa-print" (click)="print_patient(patient)"></i></td>
+            <td><i class="fas fa-trash-alt" (click)="delete(patient)"></i></td>
+            <td><i class="fas fa-clipboard-check" (click)="booking(patient)"></i></td>
+            <td >
+               <i class="far fa-edit" (click)="onSelect(patient)"></i>
+               </td>
+            <td>{{patient.age}}</td>
+            <td>{{patient.phone}}</td>
+            <td>{{patient.patientnum}}</td>
+            <td>{{patient.name}}</td>
+          </tr>
+         
+         
+           
+          
+          
+        </table>
+        <router-outlet></router-outlet>   
+</body>
+</html>
+

@@ -1,0 +1,89 @@
+<!-- <div class="container">
+     <div class="wrapper">
+      
+       <form class="form-wrapper" #form="ngForm" method="POST">
+         <fieldset class="section is-active">
+           <h3>Your Details</h3>
+           <input type="text" name="patientnum" id="name" placeholder="patientnum" [(ngModel)]="patientModel.patientnum" #patientnum="ngModel" name="dateOfBirth">
+
+
+           <input type="text" name="name" id="name" placeholder="name" [(ngModel)]="patientModel.name" #name="ngModel" name="dateOfBirth" >
+
+
+           <input type="text" name="age" id="age" placeholder="age" [(ngModel)]="patientModel.age" #age="ngModel" name="age">
+
+
+           <input type="text" name="address" id="email" placeholder="address" [(ngModel)]="patientModel.address" #address="ngModel" name="address">
+
+
+           <input type="text" name="nationality" id="nationality" placeholder="nationality" [(ngModel)]="patientModel.nationality" #nationality="ngModel" name="nationality">
+
+
+           <input type="text" name="phone" id="phone" placeholder="phone" [(ngModel)]="patientModel.phone" #phone="ngModel" name="phone">
+
+
+           <input type="text" name="notes" id="notes" placeholder="notes" [(ngModel)]="patientModel.notes" #notes="ngModel" name="notes">
+        
+           <div class="button" (click)= "onSubmit()" >Add</div>
+         </fieldset>
+      
+        
+         <fieldset class="section">
+         
+           <div class="button">Reset Form</div>
+         </fieldset>
+       </form>
+     </div>
+   </div> -->
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+   </head>
+   <body>
+    <div class="container-fluid">
+      <form #form="ngForm" method="POST">
+      <div class="row">
+           <div class="col-md-6">
+       <div class="row">
+           <button type="button" class="btn btn-info"  routerLink="/reception/reception-details/patient">Show all عرض الكل</button>
+       
+           <input class="btn btn-info age" type="text" name="age" id="age" placeholder="age" [(ngModel)]="patientModel.age" #age="ngModel" name="age"> Age
+       </div>
+       <div class="row">
+           <input class="btn btn-info inp" type="text" name="address" id="email" placeholder="address" [(ngModel)]="patientModel.address" #address="ngModel" name="address"><i>Address العنوان</i>
+           <input class="btn btn-info inp" type="text"  name="nationality" id="nationality" placeholder="nationality" [(ngModel)]="patientModel.nationality" #nationality="ngModel" name="nationality"/>nationality الجنسيه
+           <input class="btn btn-info inp" type="text" name="notes" id="notes" placeholder="notes" [(ngModel)]="patientModel.notes" #notes="ngModel" name="notes"/>notes الملاحظات
+       </div>
+           </div>
+           <div class="col-md-6">
+           <div class="row">
+                <input class="btn btn-info inp2" type="text" name="patientnum" id="name" placeholder="patientnum" [(ngModel)]="patientModel.patientnum" #patientnum="ngModel" name="dateOfBirth"/>
+                <i>Patient Number رقم المريض</i>
+                <input class="btn btn-info inp2" type="text" name="name" id="name" placeholder="name" [(ngModel)]="patientModel.name" #name="ngModel" name="dateOfBirth"/>Name الاسم
+                <label class="container">ذكر
+                     <input type="radio" checked="checked" name="radio" value="male" name="gender"  ngForm required [(ngModel)]="patientModel.gender" #gender="ngModel">
+                     <span class="checkmark"></span>
+                   </label>
+                   <label class="container">انثي
+                     <input type="radio" name="radio" value="female" name="gender"  ngForm required [(ngModel)]="patientModel.gender" #gender="ngModel">
+                     <span class="checkmark"></span>
+                   </label>
+                <input class="btn btn-info inp2" type="text"   name="phone" id="phone" placeholder="phone" [(ngModel)]="patientModel.phone" #phone="ngModel" name="phone"  />Phone رقم الهاتف   
+           </div>
+           </div>
+      </div>
+      <button type="submit" class="btn btn-info" (click)= "onSubmit()" >Add اضافه</button>
+      <button type="button" class="btn btn-info"  routerLink="/print-all">Print all طباعه الكل</button>
+      </form>
+      
+
+      <div class="row">
+           
+      </div>
+ </div>
+ <router-outlet></router-outlet>  
+   </body>
+   </html>

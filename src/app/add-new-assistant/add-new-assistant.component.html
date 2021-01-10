@@ -1,0 +1,49 @@
+<div class="login">
+  <div class="login-triangle"></div>
+
+  <h2 class="login-header">Add Assistant</h2>
+
+  <form class="login-container" #form="ngForm"(ngSubmit)="onSubmit(form)">
+       <p><input type="name" placeholder="Name"
+          name="name" [(ngModel)]="Registerassistant.name" required
+          placeholder="Enetr Your Name" [class.is-invalid]="name.invalid && name.touched" #name="ngModel" >
+       <p>
+          <small class="text-danger" [class.d-none]="name.valid || name.untouched">Enter Your Name</small>
+            <p><input type="nationalID" placeholder="national ID" placeholder="nationalID"
+               name="nationalID" [(ngModel)]="Registerassistant.nationalID" required
+               placeholder="Enetr Your nationalID" [class.is-invalid]="nationalID.invalid && nationalID.touched" #nationalID="ngModel">
+                 <p>
+                    <small class="text-danger" [class.d-none]="nationalID.valid || nationalID.untouched">Enter Your nationalID</small>
+       <p><input type="email" placeholder="email" placeholder="email"
+          name="email" [(ngModel)]="Registerassistant.email" required
+          placeholder="Enetr Your email" [class.is-invalid]="email.invalid && email.touched" #email="ngModel">
+       <p>
+          <small class="text-danger" [class.d-none]="email.valid || email.untouched">Enter Your email</small>
+       <p><input type="phone" placeholder="phone"
+          name="phone" [(ngModel)]="Registerassistant.phone" required
+          placeholder="Enetr Your phone" [class.is-invalid]="phone.invalid && phone.touched" #phone="ngModel">
+          <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Enter Your phone</small>
+       <p>
+       <p><input type="specialization" placeholder="specialization"
+          name="specialization" [(ngModel)]="Registerassistant.specialization" required
+          placeholder="Enetr Your specialization" [class.is-invalid]="specialization.invalid && specialization.touched" #specialization="ngModel">
+       <p>
+          <small class="text-danger" [class.d-none]="specialization.valid || specialization.untouched">Enter Your phone</small>
+       <p><input type="city" placeholder="city"
+          name="city" [(ngModel)]="Registerassistant.city" required
+          placeholder="Enetr Your city" [class.is-invalid]="city.invalid && city.touched" #city="ngModel"></p>
+          <small class="text-danger" [class.d-none]="city.valid || city.untouched">Enter Your city</small>
+       <p><input type="address" placeholder="address"
+          name="address" [(ngModel)]="Registerassistant.address" required
+          placeholder="Enetr Your address" [class.is-invalid]="address.invalid && address.touched" #address="ngModel"></p>
+          <small class="text-danger" [class.d-none]="address.valid || address.untouched">Enter Your address</small>
+       <p><input type="password" placeholder="Password"name="password" [(ngModel)]="Registerassistant.password" required
+          placeholder="Enter Password" [class.is-invalid]="password.invalid && password.touched" #password="ngModel"></p><small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is Required</small>
+       <p><input type="password" placeholder="repeate password"
+          name="password2" id="password2" [(ngModel)]="Registerassistant.password2"
+          required placeholder="Repeat Password Again" [class.is-invalid]="password2.invalid && password2.touched"
+          #password2="ngModel" ></p>
+          <small class="text-danger" [class.d-none]="password2.valid || password2.untouched">Password is Required</small>
+       <p><input type="submit" [disabled]="form.form.invalid" value="Add assistant" ></p>
+  </form>
+</div>

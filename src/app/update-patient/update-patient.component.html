@@ -1,0 +1,93 @@
+<div class="container-fluid">
+     <form #form="ngForm" method="POST">
+     <div class="row">
+          <div class="col-md-6">
+      <div class="row">
+          <button type="button" class="btn btn-info"  routerLink="/reception/reception-details/patient">Show all عرض الكل</button>
+      
+          <input class="btn btn-info age" type="text" name="age" id="age"  
+          value={{patientModel.age}} #age="ngModel" [(ngModel)]="patientModel.age" > Age
+      </div>
+      <div class="row">
+          <input class="btn btn-info inp" type="text" name="address" value={{patientModel.address}} #address="ngModel" [(ngModel)]="patientModel.address" ><i>Address العنوان</i>
+          <input class="btn btn-info inp" type="text"  name="nationality" id="nationality" value={{patientModel.nationality}} #nationality="ngModel" [(ngModel)]="patientModel.nationality"/>nationality الجنسيه
+          <input class="btn btn-info inp" type="text" name="notes" id="notes" value={{patientModel.notes}} #notes="ngModel" [(ngModel)]="patientModel.notes"/>notes الملاحظات
+      </div>
+          </div>
+          <div class="col-md-6">
+          <div class="row">
+               <input class="btn btn-info inp2" type="text" name="patientnum" id="name" value={{patientModel.patientnum}} #patientnum="ngModel" [(ngModel)]="patientModel.patientnum"/><i>Patient Number رقم المريض</i>
+               <input class="btn btn-info inp2" type="text" name="name" id="name" value={{patientModel.name}} #name="ngModel" [(ngModel)]="patientModel.name"/>Name الاسم
+               <label class="container">ذكر
+                    <input type="radio" checked="checked" name="radio"value="male" name="gender"  ngForm required [(ngModel)]="patientModel.gender" #gender="ngModel">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container">انثي
+                    <input type="radio" name="radio" value="female" name="gender"  ngForm required [(ngModel)]="patientModel.gender" #gender="ngModel">
+                    <span class="checkmark"></span>
+                  </label>
+               <input class="btn btn-info inp2" type="text"   name="phone" id="phone" value={{patientModel.phone}} #phone="ngModel" [(ngModel)]="patientModel.phone" />Phone رقم الهاتف   
+          </div>
+          </div>
+     </div>
+     <button type="submit" class="btn btn-info" (click)= "onSubmit()" >Edit تعديل</button>
+     </form>
+     <div class="row">
+          <div class="col-md-6">
+               
+               <input class="btn btn-info inp3" type="text"  ><i> بحث Search</i>
+          
+         
+          </div>
+          <div class="col-md-4">
+               <button type="button" class="btn btn-info"  routerLink="/dashboard">Print طباعه</button>
+          </div>
+       
+     </div>
+     <div class="row">
+          
+     </div>
+</div>
+
+
+
+
+
+ <!-- <div class="container">
+     <div class="wrapper">
+      
+       <form class="form-wrapper" #form="ngForm" method="POST">
+         <fieldset class="section is-active">
+           <h3>Your Details</h3>
+           <input type="text" name="patientnum" id="name"  
+           value={{patientModel.patientnum}} [(ngModel)]="patientModel.patientnum" #patientnum="ngModel" name="dateOfBirth" >
+
+
+           <input type="text" name="name" id="name"  [(ngModel)]="patientModel.name" #name="ngModel" name="dateOfBirth" >
+
+
+           <input type="text" name="age" id="age"  [(ngModel)]="patientModel.age" #age="ngModel" name="age">
+
+
+           <input type="text" name="address" id="email" placeholder="address" [(ngModel)]="patientModel.address" #address="ngModel" name="address">
+
+
+           <input type="text" name="nationality" id="nationality" placeholder="nationality" [(ngModel)]="patientModel.nationality" #nationality="ngModel" name="nationality">
+
+
+           <input type="text" name="phone" id="phone" placeholder="phone" [(ngModel)]="patientModel.phone" #phone="ngModel" name="phone">
+
+
+           <input type="text" name="notes" id="notes" placeholder="notes" [(ngModel)]="patientModel.notes" #notes="ngModel" name="notes" value="patientModel.notes">
+        
+           <div class="button" (click)= "onSubmit()" >Add</div>
+         </fieldset>
+      
+        
+         <fieldset class="section">
+         
+           <div class="button">Reset Form</div>
+         </fieldset>
+       </form>
+     </div>
+   </div>  -->

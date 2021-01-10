@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+</head>
+<body>
+     <router-outlet></router-outlet>  
+     <table class="my_table">
+          <tr class="header">
+            <th>طباعه</th>
+            <th>cost التكلفه</th>
+            <th>حجز</th>
+            <th>الموعد</th>
+            <th>العمر</th>
+            <th>رقم الموبايل</th>
+            <th>رقم المريض</th>
+            <th>الاسم</th>
+          </tr>
+          <tr *ngFor="let patient of patientdata">
+            <td><i class="fas fa-print" 
+              (click)="delete(patient)"></i></td>
+            <td><i class="fas fa-money-check-alt" (click)="route_cost()"> {{bookingCost.cost}} </i></td>
+            <td>{{patient.date }}</td>
+            <td>{{patient.time}}</td>
+            <td>{{patient.age}}</td>
+            <td>{{patient.phone}}</td>
+            <td>{{patient.patientnum}}</td>
+            <td>{{patient.name}}</td>
+          </tr>
+         
+         
+           
+          
+          
+        </table> 
+</body>
+</html>
